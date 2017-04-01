@@ -1,0 +1,29 @@
+body {
+  padding:50px 0px 50px 0px;
+}
+.white-text {
+    color: white;
+}
+.portfolio-caption{
+    color: gray;
+}
+a img{
+  width:486px;
+  position:relative;
+  text-align:center;
+  margin:0 auto;
+}
+.proLink{
+  margin:0 auto;
+  width:500px !important;
+}
+section{
+  float:left;
+  width:899px;
+  border-right:1px solid #eee;
+}
+aside{
+  float:left;
+  width:230px;
+  padding:0px 0px 0px 20px;
+}
