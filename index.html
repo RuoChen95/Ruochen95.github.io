@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>personal portfolio</title>
+        <title>个人主页 - Github</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,26 +12,24 @@
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
                     <a class="navbar-brand" href="http://codepen.io/a7304795/">Xie Ruochen</a>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
+                <div id="navbar">
                     <ul class="nav navbar-nav">
                         <li class="active">
                             <a href="https://ruochen95.github.io/">
-                                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home
+                                <span class="glyphicon glyphicon-home" aria-hidden="true">Home</span>
                             </a>
                         </li>
                         <li>
-                            <a href="html/blog/index.html">Blog</a>
+                            <a href="html/blog/index.html">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true">Blog</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="doc/profile_cn.docx">Profile</a>
+                            <a href="doc/profile_cn.docx">
+                                <span class="glyphicon glyphicon-user">Resume</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -40,23 +38,14 @@
     </nav>
     <section>
         <div class="my-work">
-            <h2 class="text-center">Here are some of my recent work</h2>
-            <div class="portfolio-item" id="PortfolioGis">
+            <span id="backButton" >◀</span>
+            <div class="portfolio-item" id="PortfolioArc">
                 <a class="proLink" href="https://github.com/RuoChen95/frontend-nanodegree-arcade-game" target="_blank">
                     <img src="imgs/OOP.png" class="img-responsive" alt="OOP">
                 </a>
                 <div class="portfolio-caption text-center">
                     <h4>frontend nanodegree arcade game</h4>
                     <p id="small-text" class="text-muted">Javascript</p>
-                </div>
-            </div>
-            <div class="portfolio-item" id="PortfolioGis">
-                <a class="proLink" href="https://www.coursera.org/account/accomplishments/verify/ZVJK3QCM349K" target="_blank">
-                    <img src="https://d3njjcbhbojbot.cloudfront.net/web/images/signature/template-course-cert-small.png" class="img-responsive" alt="ArcGIS">
-                </a>
-                <div class="portfolio-caption text-center">
-                    <h4>Coursera ArcGIS Fundamental Assignment 4-Electoral Politics</h4>
-                    <p id="small-text" class="text-muted">ArcGIS</p>
                 </div>
             </div>
             <div class="portfolio-item" id="PortfolioHTML">
@@ -77,6 +66,7 @@
                     <p id="small-text" class="text-muted">volunteer</p>
                 </div>
             </div>
+            <span id="forwardButton" >▶</span>
         </div>
     </section>
     <!-- end of the only section -->
@@ -98,13 +88,13 @@
             <a name="contact"></a>
             <div class="text-center">
                 <h2>Contact me:</h2>
-                <i class="fa fa-phone"></i><span>+86 186 1747 8572</span><br>
-                <i class="fa fa-envelope"></i><span>xrc_1995@163.com<span>
-                </div>
+                <i class="fa fa-phone"></i><span>+86 186 1747 8572</span>
+                <br>
+                <i class="fa fa-envelope"></i><span>xrc_1995@163.com</span>
             </div>
-        </aside>
-        <!--end of the only aside -->
-        <!-- dont need foot -->
-        <script src="js/libs/jquery.min.js"></script>
-    </body>
+        </div>
+    </aside>
+    <script src="js/main.js"></script>
+    <script src="js/libs/jquery.min.js"></script>
+</body>
 </html>
