@@ -1,0 +1,40 @@
+body{
+	margin:0;
+}
+
+header[role='banner']{
+	width: 240px;
+	color: #eee;
+	background: #58b2dc;
+
+	text-align: center;
+
+	position: fixed; /* */
+	top: 0;
+	left: 0;
+	bottom: 0;
+	padding-bottom: 4em;
+
+}
+
+header[role='banner'] p{
+	margin-top: 2em;
+}
+
+main{
+	margin-left: 240px;
+	padding: 2em;
+}
+
+main h1{
+	text-align: center;
+	margin: 0;
+}
+
+main a{
+	color: #58b2dc;
+}
+
+main article{
+	border-bottom: 2px double #eee;
+}
