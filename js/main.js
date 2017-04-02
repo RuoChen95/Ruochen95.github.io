@@ -29,3 +29,9 @@ document.getElementById('forwardButton').addEventListener("click",function(){
 	workdivItem.shift();
 	workdivItem.push(theFirstOne);
 });
+
+var workItemImage = document.querySelector('.proLink');
+var workItemHeight = window.getComputedStyle(workItemImage).height;
+var workSpans = document.querySelectorAll('.my-work span');
+workSpans[0].style = "height:" + workItemHeight;
+workSpans[1].style = "height:" + workItemHeight;
