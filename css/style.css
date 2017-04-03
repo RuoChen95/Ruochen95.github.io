@@ -1,70 +1,71 @@
-.my-work span:hover{  
-  cursor:pointer;
-  background-color: #e1e0e0;
-}  
-
-.my-work span span{
-  background-color: inherit;
+body {
+  margin:0px;
 }
 
-@media screen and (max-width: 770px) {
-  .navbar-nav{
-    display: none;
-  }
+.MenuWrap{
+  background-color: #F8F8F8;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding:0 1rem;
 }
 
-.my-work{
+.ListItem,
+.LastItem{
+  color: #777777;
+  text-decoration: none;
+}
+
+.ListItem{
+  margin-right: 1rem;
+}
+
+.LastItem{
+  margin-left: auto;
+}
+
+.workList{
   display: flex;
   justify-content: space-between;
+  background-color: #eee
 }
 
-body {
-  padding:50px 0px 50px 0px;
-}
-
-.white-text {
-    color: white;
-}
-
-.my-work span{
-  margin: 0 2em;
+.workList span{
+  margin: 0;
+  padding: 0;
   background-color: #eee;
 
   display: flex;
   justify-content: center;
   align-items:center;
 
-  width: 100px;
+  width: 8vw;
+
+  transition: background-color 1s;
+}
+
+.workList span:hover{  
+  cursor:pointer;
+  background-color: #e1e0e0;
+} 
+
+.portfolio-image{
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-image img{
+  overflow: hidden;
   height: 60vh;
 }
 
-
-div.portfolio-item{
-  max-height: 60vh;
-  max-width: 60vw;
-  overflow: hidden;
-}
-
-div.portfolio-item a{
-  margin:auto;
-}
-
 .portfolio-caption{
-  width: 20vw;
-
   background-color: hsla(0,0%,100%,0.7);
   border-radius: 0.6em;
-  position: relative;
-  top: -50vh;
-  left: 10vw;
-
+  text-align: center;
   color: gray;
 }
 
-
-section{
-  margin:0 auto;
-}
 aside{
   width:20em;
   padding:10px 20px;

@@ -9,95 +9,53 @@
         <link rel="stylesheet" href="css/media.css">
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="http://codepen.io/a7304795/">Xie Ruochen</a>
-                </div>
-                
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="https://ruochen95.github.io/">
-                                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                                <span> Home</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="html/blog/index.html">
-                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                <span> Blog</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="doc/profile_cn.docx">
-                                <span class="glyphicon glyphicon-user"></span>
-                                <span> Resume</span>
-                            </a>
-                        </li>
-                    </ul>
-                
-            </div>
+        <div class="MenuWrap">
+            <a href="https://ruochen95.github.io/" class="ListItem"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+            <a href="html/blog/index.html" class="ListItem"><span class="glyphicon glyphicon-pencil" aria-hidden="true" class="ListItem"></span> Blog</a>
+            <a href="doc/profile_cn.docx" class="ListItem"><span class="glyphicon glyphicon-user"></span> Resume</a>
+            <a href="RuoChen95.github.com" class="LastItem">Xie Ruochen</a>
         </div>
-    </nav>
-    <section>
-        <div class="my-work">
-            <span id="backButton" ><span class="glyphicon glyphicon-chevron-left"></span></span>
-            <div class="portfolio-item" id="PortfolioArc">
-                <a class="proLink" href="https://github.com/RuoChen95/frontend-nanodegree-arcade-game" target="_blank">
-                    <img src="imgs/OOP.png" class="img-responsive" alt="OOP">
-                </a>
-                <div class="portfolio-caption text-center">
-                    <h4>frontend nanodegree arcade game</h4>
-                    <p id="small-text" class="text-muted">Javascript</p>
+        <section>
+            <div class="workList">
+                <span id="backButton" class="glyphicon glyphicon-chevron-left"></span>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <a class="proLink" href="https://github.com/RuoChen95/frontend-nanodegree-arcade-game" target="_blank">
+                            <img src="imgs/OOP.png" class="img-responsive" alt="OOP">
+                        </a>
+                    </div>
+                    <div class="portfolio-caption">
+                        <h4>frontend nanodegree arcade game</h4>
+                        <p id="small-text" class="text-muted">Javascript</p>
+                    </div>
                 </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <a class="proLink" href="https://www.transifex.com/user/profile/xieruochen_gtc_M2ZiMj/" target="_blank">
+                            <img src="imgs/volunteer.jpg" class="img-responsive" alt="translator">
+                        </a>
+                    </div>
+                    <div class="portfolio-caption">
+                        <h4>Chinese language of the Global Translator Community team </h4>
+                        <p id="small-text" class="text-muted">volunteer</p>
+                    </div>
+                </div>
+                <span id="forwardButton" class="glyphicon glyphicon-chevron-right"></span>
             </div>
-            <div class="portfolio-item" id="PortfolioHTML">
-                <a class="proLink" href="https://codepen.io/a7304795/pen/NRrQPG" target="_blank">
-                    <img src="http://img2.mtime.cn/up/1218/1357218/1627B1ED-0B30-4D00-84F9-DE2281C8E9C5_o.jpg" class="img-responsive" alt="WEB">
-                </a>
-                <div class="portfolio-caption text-center">
-                    <h4>Build a Tribute Page</h4>
-                    <p id="small-text" class="text-muted">HTML</p>
+        </section>
+        <!-- end of the only section -->
+        <aside>
+            <div class="my-contact">
+                <a name="contact"></a>
+                <div class="text-center">
+                    <h2>Contact me:</h2>
+                    <span class="fa fa-phone"></span><span> +86 186 1747 8572</span>
+                    <br>
+                    <span class="fa fa-envelope"></span><span> xrc_1995@163.com</span>
                 </div>
             </div>
-            <div class="portfolio-item" id="PortfolioVolun">
-                <a class="proLink" href="https://www.transifex.com/user/profile/xieruochen_gtc_M2ZiMj/" target="_blank">
-                    <img src="https://cdn-txweb.pressidium.com/wp-content/themes/transifex/assets/dist/img/home-hero.jpg" class="img-responsive" alt="translator">
-                </a>
-                <div class="portfolio-caption text-center">
-                    <h4>Chinese (China) language of the Global Translator Community team </h4>
-                    <p id="small-text" class="text-muted">volunteer</p>
-                </div>
-            </div>
-            <span id="forwardButton" ><span class="glyphicon glyphicon-chevron-right"></span></span>
-        </div>
-    </section>
-    <!-- end of the only section -->
-    <aside>
-        <div class="my-linkage">
-            <h2 class="text-center" id="linkage">Here are some of my linkage:</h2>
-            <li class="btn btn-block btn-primary ">
-                <a href="https://github.com/RuoChen95" target="_blank" class='white-text'><span>Github</span></a>
-            </li>
-            <li class="btn btn-block btn-primary ">
-                <a href="www.twitter.com/xruochen" target="_blank" class='white-text'><span>Twitter</span></a>
-            </li>
-            <li class="btn btn-block btn-primary ">
-                <a href="https://www.zhihu.com/people/xrc1995" target="_blank" class='white-text'><span>Zhihu</span></a>
-            </li>
-        </div>
-        <hr class="intro-divider">
-        <div class="my-contact">
-            <a name="contact"></a>
-            <div class="text-center">
-                <h2>Contact me:</h2>
-                <i class="fa fa-phone"></i><span>+86 186 1747 8572</span>
-                <br>
-                <i class="fa fa-envelope"></i><span>xrc_1995@163.com</span>
-            </div>
-        </div>
-    </aside>
-    <script src="js/main.js"></script>
-    <script src="js/libs/jquery.min.js"></script>
-</body>
+        </aside>
+        <script src="js/main.js"></script>
+        <script src="js/libs/jquery.min.js"></script>
+    </body>
 </html>
