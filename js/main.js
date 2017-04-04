@@ -1,14 +1,14 @@
 (function() {
+
+	//filter function
 	function filterForItems(el) {
 		return el.nodeName == "DIV";
 	}
-
 	var workItem = document.getElementsByClassName('portfolio-item');
 
 	for (i = 1; i < workItem.length; i++) {
 		workItem[i].style = "display:none";
 	}
-
 	var workdivItem = Array.prototype.filter.call(workItem, filterForItems);
 
 	document.getElementById('backButton').addEventListener("click", function() {
@@ -31,9 +31,5 @@
 		workdivItem.push(theFirstOne);
 	});
 
-	var workItemImage = document.querySelector('.proLink');
-	var workItemHeight = window.getComputedStyle(workItemImage).height;
-	var workSpans = document.querySelectorAll('.my-work span');
-	workSpans[0].style = "height:" + workItemHeight;
-	workSpans[1].style = "height:" + workItemHeight;
+
 })();
