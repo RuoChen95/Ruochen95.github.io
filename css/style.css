@@ -71,3 +71,9 @@ aside{
   padding:10px 20px;
   margin: 10px auto 0;
 }
+
+.contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

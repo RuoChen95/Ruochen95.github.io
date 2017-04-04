@@ -1,8 +1,38 @@
+body{
+	margin:0;
+	font-family: 'Avenir Next',Avenir,'Helvetica Neue',Helvetica,'Lantinghei SC','Hiragino Sans GB',sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+h1{
+	font-size: 1.65em;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.content{
+	padding-bottom: 0.3em;
+	border-bottom: 2px gray double;
+}
+
+.content hr{
+	width: 70%;
+}
+
+.content h2{
+	font-size: 110%;
+}
+
+.blogHead{
+	padding-top: 0.8em;
+}
+
 header[role='banner'] .icon{
     width: 100px;
     height: 100px;
 
-    margin: 0em auto;
+    margin: 2em auto;
 	
 }
 
@@ -24,11 +54,6 @@ article header .byline{
 	display: flex;
 	justify-content: space-between;
 	color: #999;
-}
-
-body{
-	margin:0;
-	font-family: 'Avenir Next',Avenir,'Helvetica Neue',Helvetica,'Lantinghei SC','Hiragino Sans GB',sans-serif;
 }
 
 header[role='banner']{
