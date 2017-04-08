@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-An ordinary web development.
+Some information about you!
 
 ### More Information
 
->Grown up in Hangzhou
+A place to include any other types of information that you'd like to include about yourself.
 
 ### Contact me
 
-[xrc_1995@163.com](mailto:xrc_1995@163.com)
+[email@domain.com](mailto:email@domain.com)
