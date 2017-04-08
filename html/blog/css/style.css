@@ -93,6 +93,10 @@ main article{
 	border-bottom: 2px double #eee;
 }
 
+.secondaryText p{
+	margin:0;
+}
+
 @media screen and (max-width: 720px) {
     header[role='banner']{
     	display: block;
