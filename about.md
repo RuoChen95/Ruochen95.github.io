@@ -4,13 +4,13 @@ title: About
 permalink: /about/
 ---
 
-一名普通的前端工程师
+Another ordinary coder
+
+目标是对于技术以及艺术的敏锐感受力，以及精神和肉体上的强健
 
 ### More Information
 
 在杭州长大
-
-毕业于华北电力大学
 
 ### Contact me
 
