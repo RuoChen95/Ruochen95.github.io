@@ -11,6 +11,14 @@ liferay是一个开源Java库，通常是作为企业的内网系统。这个库
 
 需要三大类环境：node，npm；yeoman；SASS from Ruby。根据[教程](https://dev.liferay.com/zh/develop/tutorials/-/knowledge_base/7-0/themes-generator)配置即可。目前的问题是，npmrc文件如果按照上面要求修改，环境会报错安装不上，npm在后续构建theme的时候也会报错。
 
+### portal_normal.ftl
+
+../theme name/src/templates/portal_normal.ftl文件是liferay模版文件，改了其中的代码后可以直接在主页中显示出来。具体可以直接调用的模版是宏（[macros](https://dev.liferay.com/zh/develop/tutorials/-/knowledge_base/7-0/freemarker-macros)）,其中的date宏不能直接调用，control_menu如果已经有了调用后会和已有的重叠，breadcrumbs只能调用一次。
+
+调用后在theme文件中使用<code>gulp deploy</code>就能生成build文件，然后在对应的tomcat文件夹中用.sh文件部署服务器即可实现这份ftl文件的改动。
+
+目前的问题是响应的css源码找不到，无法自定义宏以及不知道怎么引用数据。
+
 ### Liferay Theme Generator
 
 激活代码是<code>yo liferay-theme</code>
