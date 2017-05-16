@@ -3,27 +3,27 @@ layout: post
 title: Liferay实践回顾
 ---
 
-liferay是一个开源Java库，通常是作为企业的内网系统。这个库将页面的不同元素，例如日历、开会计划等作为模版，用户可以通过模版来组织页面格式。由于公司项目要求，已经学习了一段时间，但是还没有明白页面是什么实现的。liferay由于是后端框架，页面实现和简单的静态页面完全不同，在学习的过程中有一些东西需要回顾一下：
+liferay是一个开源Java库，通常是作为企业的内网系统。这个库将页面的不同元素，例如日历、开会计划等作为模版，用户可以通过模版来组织页面格式。由于公司项目要求，已经学习了一段时间。liferay由于是java框架，页面实现和简单的静态页面完全不同，学习起来挺有难度，需要回顾一下。
 
 ## 通过命令行开发
 
 ### 环境
 
-需要三大类环境：node，npm；yeoman；SASS from Ruby。根据[教程](https://dev.liferay.com/zh/develop/tutorials/-/knowledge_base/7-0/themes-generator)配置即可。目前的问题是，npmrc文件如果按照上面要求修改，环境会报错安装不上，npm在后续构建theme的时候也会报错。
+需要三大类环境：node，npm；yeoman；SASS from Ruby。根据[教程](https://dev.liferay.com/zh/develop/tutorials/-/knowledge_base/7-0/themes-generator)配置即可。但是，npmrc文件如果按照上面要求修改，环境会报错安装不上，npm在后续构建theme的时候也会报错。
 
 ### portal_normal.ftl
 
-../theme name/src/templates/portal_normal.ftl文件是liferay模版文件，改了其中的代码后可以直接在主页中显示出来。具体可以直接调用的模版是宏（[macros](https://dev.liferay.com/zh/develop/tutorials/-/knowledge_base/7-0/freemarker-macros)）,其中的date宏不能直接调用，control_menu如果已经有了调用后会和已有的重叠，breadcrumbs只能调用一次。
+../\"theme name\"/src/templates/portal_normal.ftl文件是liferay模版文件，改了其中的代码后可以直接在主页中显示出来，是主要需要进行修改的地方。具体可以直接调用的模版是宏（[macros](https://dev.liferay.com/zh/develop/tutorials/-/knowledge_base/7-0/freemarker-macros)）,其中的date宏不能直接调用，control_menu如果已经有了调用后会和已有的重叠，breadcrumbs只能调用一次，user_personal_bar就是一个简单的小用户界面。
 
-调用后在theme文件中使用<code>gulp deploy</code>就能生成build文件，然后在对应的tomcat文件夹中用.sh文件部署服务器即可实现这份ftl文件的改动。
+调用后在theme文件中使用<code>gulp deploy</code>就能生成build文件，然后在对应的tomcat文件夹中用.sh文件部署服务器即可实现这份ftl文件的改动，注意需要在feel and look中选择相应的样式。样式方面，可以通过改变_custom.scss实现。
 
-目前的问题是响应的css源码找不到，无法自定义宏以及不知道怎么引用数据。
+目前的问题，无法自定义宏以及不知道连接前后端。
 
 ### Liferay Theme Generator
 
 激活代码是<code>yo liferay-theme</code>
 
-使用yeoman引入这个主题构建器，这个构建器会创建好一个主题的架构。在文件中会有一个src文件夹，这个src文件夹会存储进行改动的文件。其中的CSS文件是以Sassy CSS文件存储的。这个构建器还能通过<code>yo liferay-theme:layout</code>以及<code>yo liferay-theme:themelet</code>来改变页面的基础布局以及增加小组件。目前的问题是将theme构建好之后如何应用到已经在tomcat上跑起来的页面中……
+使用yeoman引入这个主题构建器，这个构建器会创建好一个主题的架构。在文件中会有一个src文件夹，这个src文件夹会存储进行改动的文件。其中的CSS文件是以Sassy CSS文件存储的。这个构建器还能通过<code>yo liferay-theme:layout</code>以及<code>yo liferay-theme:themelet</code>来改变页面的基础布局以及增加小组件。目前的问题如果使用这个方式，将theme构建好之后不知道如何应用到已经在tomcat上跑起来的页面中……
 
 ## 通过Eclipse开发
 
