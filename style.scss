@@ -295,3 +295,23 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+
+// experience modal
+.workList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  img {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .workContent {
+    display: flex;
+    width: 700px;
+    height: 600px;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
