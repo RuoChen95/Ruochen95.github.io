@@ -9,18 +9,49 @@ title: npm package技术实践
 
 vue方面：
 
-* 父子组件事件传递
-* 插槽slot
+* 父子组件事件传递（已完成）
+* 插槽slot（已完成）
 
 npm方面：
 
 * 上传npm package及其使用（已完成）
-* webpack的构建步骤
+* webpack的构建步骤/将vue文件编译成js文件/build a vue component library
+
+----
+
+父子组件事件传递
+
+子组件传父组件的本质是自定义事件。
+
+父组件：@事件名称="function()"
+子组件：@click="$emit('事件名称')"
+
+----
+
+插槽slot
+
+比较简单，见https://cn.vuejs.org/v2/guide/components-slots.html
+
+具名插槽：
+
+父组件：<template slot="slotName"></template>
+子组件：<slot name="slotName"></slot>
 
 ----
 
 将组件上传到npm package及其使用
 
+在组件文件夹内使用`` npm login ``登录npm，使用``npm publish``上传当前版本。npm文件服务器搜索package.json中的version字段来判断版本，而不是通过文件的哈希值。
+
 可见我的项目https://github.com/RuoChen95/Learn-Vue-2，其中的[sample project](https://github.com/RuoChen95/Learn-Vue-2/tree/master/sample-project)的coupon就用到了自己写的[coupon组件](https://github.com/RuoChen95/Learn-Vue-2/tree/master/btm-coupon-demo-pkg)。目前版本可以说是npm package的最简化版了。在使用的时候注意写明组件路径：
 
-> import Coupon from 'btm-coupon-demo-pkg/components/coupon.vue'
+`` import Coupon from 'btm-coupon-demo-pkg/components/coupon.vue' ``
+
+----
+
+webpack的构建步骤/将vue文件编译成js文件/build a vue component library
+
+比较复杂，还是不太懂，参考：
+
+1. https://juejin.im/post/5b23149b6fb9a00e325e6a80
+2. https://medium.com/@waiting7777/how-to-build-a-vue-component-library-edcf238a9918
