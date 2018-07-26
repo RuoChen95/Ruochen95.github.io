@@ -19,27 +19,29 @@ npm方面：
 
 ----
 
-父子组件事件传递
+#### 父子组件事件传递
 
 子组件传父组件的本质是自定义事件。
 
-父组件：@事件名称="function()"
-子组件：@click="$emit('事件名称')"
+父组件：```@事件名称="function()"```
+
+子组件：```@click="$emit('事件名称')"```
 
 ----
 
-插槽slot
+#### 插槽slot
 
 比较简单，见https://cn.vuejs.org/v2/guide/components-slots.html
 
 具名插槽：
 
-父组件：<template slot="slotName"></template>
-子组件：<slot name="slotName"></slot>
+父组件：```<template slot="slotName"></template>```
+
+子组件：```<slot name="slotName"></slot>```
 
 ----
 
-将组件上传到npm package及其使用
+#### 将组件上传到npm package及其使用
 
 在组件文件夹内使用`` npm login ``登录npm，使用``npm publish``上传当前版本。npm文件服务器搜索package.json中的version字段来判断版本，而不是通过文件的哈希值。
 
@@ -49,9 +51,17 @@ npm方面：
 
 ----
 
-webpack的构建步骤/将vue文件编译成js文件/build a vue component library
+#### webpack的构建步骤/将vue文件编译成js文件/build a vue component library
 
-比较复杂，还是不太懂，参考：
+参考：
 
 1. https://juejin.im/post/5b23149b6fb9a00e325e6a80
 2. https://medium.com/@waiting7777/how-to-build-a-vue-component-library-edcf238a9918
+3. webpack-vue文件配置从零到全：https://www.jianshu.com/p/4e16e2c6fb4c
+
+需要有两个文件：
+
+1. webpack.config.js文件：用于进行打包的配置，将文件进行打包编译。webpack的作用类似于以前的gulp和grunt。
+2. package.json文件：npm的属性文件，用于指明项目所使用的不同包
+
+其他的就是不同npm包的使用，组合起来打包项目。
