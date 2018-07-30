@@ -56,8 +56,8 @@ npm方面：
 参考：
 
 1. https://juejin.im/post/5b23149b6fb9a00e325e6a80
-2. https://medium.com/@waiting7777/how-to-build-a-vue-component-library-edcf238a9918
-3. webpack-vue文件配置从零到全：https://www.jianshu.com/p/4e16e2c6fb4c
+2. vue-cli打包package的方法：https://cli.vuejs.org/guide/build-targets.html#library
+3. vue-cli的配置方法：使用vue.config.js文件
 
 需要有两个文件：
 
@@ -65,3 +65,9 @@ npm方面：
 2. package.json文件：npm的属性文件，用于指明项目所使用的不同包
 
 其他的就是不同npm包的使用，组合起来打包项目。
+
+目前使用了构建工具vue-cli，具体使用方式为：
+
+1. 在npm中配置好具体的打包方式，使用[Web Component方式](https://cli.vuejs.org/guide/build-targets.html#web-component)打包
+2. 打包后会生成编译后的js文件
+3. 如何引用待续...
