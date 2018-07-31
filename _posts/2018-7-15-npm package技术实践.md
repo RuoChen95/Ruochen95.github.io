@@ -47,7 +47,9 @@ npm方面：
 
 可见我的项目https://github.com/RuoChen95/Learn-Vue-2，其中的[sample project](https://github.com/RuoChen95/Learn-Vue-2/tree/master/sample-project)的coupon就用到了自己写的[coupon组件](https://github.com/RuoChen95/Learn-Vue-2/tree/master/btm-coupon-demo-pkg)。目前版本可以说是npm package的最简化版了。在使用的时候注意写明组件路径：
 
-`` import Coupon from 'btm-coupon-demo-pkg/components/coupon.vue' ``
+``` import Coupon from 'btm-coupon-demo-pkg/components/coupon.vue' ```
+
+在项目文件夹内输入 ```npm link [package path]``` 后就能将本地文件关联到项目文件中，方便调试。
 
 ----
 
@@ -70,4 +72,6 @@ npm方面：
 
 1. 在npm中配置好具体的打包方式，使用[Web Component方式](https://cli.vuejs.org/guide/build-targets.html#web-component)打包
 2. 打包后会生成编译后的js文件
-3. 如何引用待续...
+3. 如何引用待续。
+
+    1. 目前问题：引用编译后的js文件报错：Vue is not defined
