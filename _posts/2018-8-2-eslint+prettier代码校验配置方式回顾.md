@@ -1,0 +1,60 @@
+---
+layout: post
+title: eslint + prettier代码校验配置方式回顾
+---
+
+基本目的：代码的风格需要统一，统一的代码风格也能降低项目出错的概率，例如能够校验v-for后是否加了:key，防止列表渲染出错。同时，为了提高效率，可以使用prettier自动将代码风格统一。
+
+相关链接：
+
+* [prettier官网](https://prettier.io/)
+* [eslint官网](http://eslint.cn/docs/user-guide/configuring)
+
+基本思路：
+
+增加的package文件：
+
+* prettier
+* eslint-config-prettier
+* eslint-plugin-prettier
+* eslint-plugin-vue
+* vue-eslint-parser
+
+修改eslint配置文件：
+
+```
+module.exports = {
+  root: true,
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: 'babel-eslint',
+    ecmaVersion: 2017,
+    sourceType: 'module'
+  },
+  env: {
+    browser: true,
+  },
+  // https://github.com/standard/standard/blob/master/docs/RULES-en.md
+  extends: ['prettier', 'plugin:vue/essential'],
+  // required to lint *.vue files
+
+  // using 'html' plugin will alert: "warning  Delete `⏎`  prettier/prettier"
+  plugins: [
+    'prettier'
+  ],
+  // add your custom rules here
+  'rules': {
+    'prettier/prettier': ['warn'],
+  }
+}
+```
+
+增加npm命令：
+
+* 用eslint校验代码格式：```"lint": "eslint --ext .js,.vue src"```，具体含义就是校验.js文件，.vue文件以及src目录下的文件。
+* 用prettier将文件统一：```"format": "prettier --write '{src,config,mock}/**/*.{js,json,vue,less}'"```
+
+
+细节问题：
+
+* eslint和prettier的关系：eslint是JavaScript的语法验证器，其作用只是告诉用户哪里的代码不符合规范，自动帮助用户修改文件的功能较弱，而且其配置项较多，不太容易使用。prettier是"opinionated code formatter"、"固执的代码修改器"，能以较少的配置项自动的帮助用户修改文件。本质就是使用了eslint的校验文本功能，prettier的基本规范以及prettier的自动修改功能。
