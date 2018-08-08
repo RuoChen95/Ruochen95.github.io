@@ -51,10 +51,18 @@ module.exports = {
 
 增加npm命令：
 
-* 用eslint校验代码格式：```"lint": "eslint --ext .js,.vue src"```，具体含义就是校验.js文件，.vue文件以及src目录下的文件。
 * 用prettier将文件统一：```"format": "prettier --write '{src,config,mock}/**/*.{js,json,vue,less}'"```
+* 用eslint校验代码格式：```"lint": "eslint --ext .js,.vue src"```，具体含义就是校验.js文件，.vue文件以及src目录下的文件。
+
+常见报错：
+
+* ```Elements in iteration expect to have 'v-bind:key' directives  vue/require-v-for-key``` 增加key值即可
 
 
 细节问题：
 
 * eslint和prettier的关系：eslint是JavaScript的语法验证器，其作用只是告诉用户哪里的代码不符合规范，自动帮助用户修改文件的功能较弱，而且其配置项较多，不太容易使用。prettier是"opinionated code formatter"、"固执的代码修改器"，能以较少的配置项自动的帮助用户修改文件。本质就是使用了eslint的校验文本功能，prettier的基本规范以及prettier的自动修改功能。
+
+遗留问题：
+
+* 报错：No parser and no filepath given, using 'babylon' the parser now but this will throw an error in the future. Please specify a parser or a filepath so one can be inferred.
