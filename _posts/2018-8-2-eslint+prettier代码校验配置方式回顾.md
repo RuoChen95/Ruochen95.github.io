@@ -15,10 +15,11 @@ title: eslint + prettier代码校验配置方式回顾
 增加的package文件：
 
 * prettier
-* eslint-config-prettier
-* eslint-plugin-prettier
-* eslint-plugin-vue
-* vue-eslint-parser
+* eslint-config-prettier: Turns off all rules that are unnecessary or might conflict with Prettier.
+* eslint-plugin-prettier: 
+Runs Prettier as an ESLint rule and reports differences as individual ESLint issues.
+* eslint-plugin-vue: Official ESLint plugin for Vue.js
+* vue-eslint-parser: The ESLint custom parser for .vue files, dependencies of eslint-plugin-vue.
 
 修改eslint配置文件：
 
@@ -56,13 +57,11 @@ module.exports = {
 
 常见报错：
 
-* ```Elements in iteration expect to have 'v-bind:key' directives  vue/require-v-for-key``` 增加key值即可
+* ```Elements in iteration expect to have 'v-bind:key' directives  vue/require-v-for-key``` 增加key值即可。
+
+* 报错："No parser and no filepath given, using 'babylon' the parser now but this will throw an error in the future. Please specify a parser or a filepath so one can be inferred"。安装最新版本的vue-loader即可：```npm install --save-dev vue-loader@13.7.2```
 
 
 细节问题：
 
 * eslint和prettier的关系：eslint是JavaScript的语法验证器，其作用只是告诉用户哪里的代码不符合规范，自动帮助用户修改文件的功能较弱，而且其配置项较多，不太容易使用。prettier是"opinionated code formatter"、"固执的代码修改器"，能以较少的配置项自动的帮助用户修改文件。本质就是使用了eslint的校验文本功能，prettier的基本规范以及prettier的自动修改功能。
-
-遗留问题：
-
-* 报错：No parser and no filepath given, using 'babylon' the parser now but this will throw an error in the future. Please specify a parser or a filepath so one can be inferred.
