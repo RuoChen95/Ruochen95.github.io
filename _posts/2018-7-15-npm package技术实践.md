@@ -70,8 +70,10 @@ npm方面：
 
 目前使用了构建工具vue-cli，具体使用方式为：
 
-1. 在npm中配置好具体的打包方式，使用[Web Component方式](https://cli.vuejs.org/guide/build-targets.html#web-component)打包
-2. 打包后会生成编译后的js文件
-3. 如何引用待续。
+1. 在npm中配置好具体的打包方式，使用[Web Component方式](https://cli.vuejs.org/guide/build-targets.html#web-component)打包；
+2. 打包后会生成编译后的js文件；
+3. 使用npm link测试本地文件：
+    1. 在package文件中使用npm link，出现：本地npm包路径 -> 本地package路径
+    2. 在项目文件中使用npm link [package名称]，出现：项目npm包路径 -> 本地npm包路径 -> 本地package路径。npm unlink同理。
+4. 在项目中正确引用(待写...)
 
-    1. 目前问题：引用编译后的js文件报错：Vue is not defined
