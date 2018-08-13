@@ -55,6 +55,16 @@ module.exports = {
 * 用prettier将文件统一：```"format": "prettier --write '{src,config,mock}/**/*.{js,json,vue,less}'"```
 * 用eslint校验代码格式：```"lint": "eslint --ext .js,.vue src"```，具体含义就是校验.js文件，.vue文件以及src目录下的文件。
 
+增加.prettierrc文件：
+```
+{
+  "printWidth": 120,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5"
+}
+```
+
 常见报错：
 
 * ```Elements in iteration expect to have 'v-bind:key' directives  vue/require-v-for-key``` 增加key值即可。
