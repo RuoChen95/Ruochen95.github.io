@@ -1,5 +1,6 @@
 var projects = {
-    "projects": [{
+    "projects": [
+        {
             "name": "frontend nanodegree arcade game",
             "knowledge": "Javascript",
             "src": "https://github.com/RuoChen95/frontend-nanodegree-arcade-game",
@@ -15,6 +16,7 @@ var projects = {
 };
 
 projects.display = function(){
+    console.log(this.projects)
     for (var project = 0; project < this.projects.length; project++) {
         $(".workContent").append(HTMLprojectStart);
         var formattedSrc = HTMLprojectSrc.replace("%data%", this.projects[project].src);

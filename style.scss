@@ -314,3 +314,13 @@ footer {
     justify-content: space-around;
   }
 }
+
+div.wrapper-content {
+  min-height: 100%;
+  padding-bottom: 86px;
+}
+div.wrapper-footer {
+  height: 86px;
+  margin-top: -86px;
+}
+html,body{height:100%;margin:0;padding:0;}

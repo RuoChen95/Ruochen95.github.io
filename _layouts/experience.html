@@ -2,6 +2,13 @@
 layout: default
 ---
 <article class="page">
+    <h3>My demo</h3>
+    <div class="projectList">
+        <ul>
+            <li><a href="{{ site.baseurl }}/projects/todoApp">Todo app</a>: A todo list app using Vue.js and Vue CLI 3.0. (<a href="https://github.com/RuoChen95/vue-todo-app">source code</a>)</li>
+        </ul>
+    </div>
+    <h3>My experience</h3>
 	<div class="workList">
 		<img id="backButton" src="../experience/imgs/left.svg">
 		<div class="workContent"></div>
@@ -11,3 +18,14 @@ layout: default
 		{{ content }}
 	</div>
 </article>
+<style>
+    .portfolio-item {
+        display: flex;
+        flex-direction: column;
+    }
+    .portfolio-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>

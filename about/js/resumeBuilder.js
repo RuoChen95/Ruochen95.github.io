@@ -1,5 +1,11 @@
 var projects = {
-    "projects": [{
+    "projects": [
+        // {
+        //   "name": "WEB Front End Development(In Bitmain, 2017 - presents)",
+        //   "knowledge": "Work Experience",
+        //   "image": "imgs/bitmain.png"
+        // },
+        {
             "name": "frontend nanodegree arcade game",
             "knowledge": "Javascript",
             "src": "https://github.com/RuoChen95/frontend-nanodegree-arcade-game",
@@ -7,7 +13,7 @@ var projects = {
         },
         {
             "name": "Chinese language of the Global Translator Community team",
-            "knowledge": "volunteer",
+            "knowledge": "Volunteer",
             "src": "https://www.transifex.com/user/profile/xieruochen_gtc_M2ZiMj/",
             "image": "imgs/volunteer.jpg"
         },
