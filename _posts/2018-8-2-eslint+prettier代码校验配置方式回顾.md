@@ -1,6 +1,6 @@
 ---
 layout: post
-title: eslint + prettier代码校验配置方式回顾
+title: eslint + prettier + lint-staged代码校验配置方式回顾
 ---
 
 基本目的：代码的风格需要统一，统一的代码风格也能降低项目出错的概率，例如能够校验v-for后是否加了:key，防止列表渲染出错。同时，为了提高效率，可以使用prettier自动将代码风格统一。
@@ -12,7 +12,7 @@ title: eslint + prettier代码校验配置方式回顾
 
 基本思路：
 
-增加的package文件：
+### 增加的package文件：
 
 * prettier
 * eslint-config-prettier: Turns off all rules that are unnecessary or might conflict with Prettier.
@@ -20,8 +20,10 @@ title: eslint + prettier代码校验配置方式回顾
 Runs Prettier as an ESLint rule and reports differences as individual ESLint issues.
 * eslint-plugin-vue: Official ESLint plugin for Vue.js
 * vue-eslint-parser: The ESLint custom parser for .vue files, dependencies of eslint-plugin-vue.
+* lint-staged: Before committing your code, fun lint;
+* husky: Prevent bad commit
 
-修改eslint配置文件：
+### 修改eslint配置文件：
 
 ```
 module.exports = {
@@ -50,12 +52,12 @@ module.exports = {
 }
 ```
 
-增加npm命令：
+### 增加npm命令：
 
 * 用prettier将文件统一：```"format": "prettier --write '{src,config,mock}/**/*.{js,json,vue,less}'"```
 * 用eslint校验代码格式：```"lint": "eslint --ext .js,.vue src"```，具体含义就是校验.js文件，.vue文件以及src目录下的文件。
 
-增加.prettierrc文件：
+### 增加.prettierrc文件：
 ```
 {
   "printWidth": 120,
@@ -64,6 +66,23 @@ module.exports = {
   "trailingComma": "es5"
 }
 ```
+
+### 增加package配置：
+```
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,vue,less}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+```
+
+----
 
 常见报错：
 
