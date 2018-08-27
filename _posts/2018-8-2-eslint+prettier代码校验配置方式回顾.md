@@ -23,6 +23,10 @@ Runs Prettier as an ESLint rule and reports differences as individual ESLint iss
 * lint-staged: Before committing your code, fun lint;
 * husky: Prevent bad commit
 
+```
+npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-vue vue-eslint-parser lint-staged husky vue-loader@13.7.2
+```
+
 ### 修改eslint配置文件：
 
 ```
@@ -67,7 +71,7 @@ module.exports = {
 }
 ```
 
-### 增加package配置：
+### 增加git hooks配置：
 ```
   "husky": {
     "hooks": {
@@ -84,11 +88,13 @@ module.exports = {
 
 ----
 
-常见报错：
+常见问题：
 
-* ```Elements in iteration expect to have 'v-bind:key' directives  vue/require-v-for-key``` 增加key值即可。
+* npm run lint后，报错：```Elements in iteration expect to have 'v-bind:key' directives  vue/require-v-for-key``` 。增加key值即可。
 
-* 报错："No parser and no filepath given, using 'babylon' the parser now but this will throw an error in the future. Please specify a parser or a filepath so one can be inferred"。安装最新版本的vue-loader即可：```npm install --save-dev vue-loader@13.7.2```
+* npm run dev后，报错："No parser and no filepath given, using 'babylon' the parser now but this will throw an error in the future. Please specify a parser or a filepath so one can be inferred"。安装最新版本的vue-loader即可：```npm install --save-dev vue-loader@13.7.2```
+
+* 可能一些自定义标签prettier的基本规范不认，导致报错："Parsing error: x-invalid-end-tag  vue/no-parsing-error"，可以在eslintrc.js中配置规则```"vue/no-parsing-error": [2, { "x-invalid-end-tag": false }]```
 
 
 细节问题：
