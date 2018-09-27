@@ -23,3 +23,10 @@ experience文件夹是我自己写的个人项目经历界面，主要用到了j
 images文件夹存储图像；_config.yml是配置文件，储存了页面名称、描述、icon的链接等；about.md是主页面中about页面的具体内容；index.html定义了主页面；style.scss用于生成最终的css。
 
 projects文件夹储存了我自己写的项目源码或编译后的代码。
+
+-----
+
+vue项目打包checklist
+
+1. 是否手动修改了index.html中的js路径
+2. 

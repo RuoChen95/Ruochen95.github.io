@@ -12,9 +12,9 @@ permalink: /about/
 
 ### More Information
 
-在杭州长大
+在杭州长大，
 
-晚睡晚起
+生活向的博客在简书。
 
 ### Contact me
 
