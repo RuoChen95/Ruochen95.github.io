@@ -1,8 +1,8 @@
 个人网站实践，主要用了jekyll，sass，DOM，事件监听，Git等等。
 
-本地启动：jekyll serve
+本地启动：<code>jekyll serve</code>
 
-主站是用了github上找的[jekyll框架](https://github.com/barryclark/jekyll-now).
+主站是用了github上找的[jekyll框架](https://github.com/barryclark/jekyll-now)。教程简单，值得推荐。
 
 _includes文件夹中包括：
 1. analytics.html服务于google统计功能；
