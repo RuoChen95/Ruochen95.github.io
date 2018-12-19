@@ -28,6 +28,10 @@ projects文件夹储存了我自己写的项目源码或编译后的代码。
 
 （master上的一些工作）
 
+（测试用）
+
+（然后又做了些工作）
+
 vue项目打包checklist
 
 1. 是否手动修改了index.html中的js路径
