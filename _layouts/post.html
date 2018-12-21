@@ -3,7 +3,16 @@ layout: default
 ---
 
 <article class="post">
-  <h1>{{ page.title }}</h1>
+  <h1>
+      {{ page.title }}
+  </h1>
+
+    <small>
+        {% for tag in page.tags %}
+        <a href="/tags/{{ tag }}/">{{ tag }}</a>
+        {% endfor %}
+    </small>
+
 
   <div class="entry">
     {{ content }}
@@ -12,6 +21,20 @@ layout: default
   <div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
+
+    <div>
+        <p>Tags:</p>
+        <p>
+            {% for tag in site.tags %}
+            <!-- Here's a hack to generate a "tag cloud" where the size of
+            the word is directly proportional to the number of posts with
+            that tag. -->
+            <a href="/tags/{{ tag[0] }}/">
+                {{ tag[0] }} |
+            </a>
+            {% endfor %}
+        </p>
+    </div>
 
   {% include disqus.html %}
 </article>

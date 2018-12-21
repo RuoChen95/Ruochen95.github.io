@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Git rebase
+tags: git
 ---
 
 今天下午，花了小半天的时间看了下git文档的分支部分，目的是学习一下git rebase，
