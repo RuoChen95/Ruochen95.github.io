@@ -6,4 +6,4 @@ permalink: /experience/
 
 ### Contact me
 
-[ruochen.xie@bitmain.com](mailto:ruochen.xie@bitmain.com)
+[xrc_1995@163.com](mailto:xrc_1995@163.com)
