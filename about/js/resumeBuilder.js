@@ -1,10 +1,11 @@
 var projects = {
     "projects": [
-        // {
-        //   "name": "WEB Front End Development(In Bitmain, 2017 - presents)",
-        //   "knowledge": "Work Experience",
-        //   "image": "imgs/bitmain.png"
-        // },
+        {
+          "name": "Front-end web Development (In Bitmain.com, 2017 - 2018)",
+          "knowledge": "Vue.js, Vuex, vue-router, vant, elementUI, npm, webpack, Git",
+          "src": "https://shop.bitmain.com",
+          "image": "imgs/bitmain.png"
+        },
         {
             "name": "frontend nanodegree arcade game",
             "knowledge": "Javascript",
