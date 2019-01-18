@@ -1,8 +1,8 @@
 var projects = {
     "projects": [
         {
-          "name": "Front-end web Development (In Bitmain.com, 2017 - 2018)",
-          "knowledge": "Vue.js, Vuex, vue-router, vant, elementUI, npm, webpack, Git",
+          "name": "Front-end web Development (In Bitmain.com, 2017.4 - 2018.12)",
+          "knowledge": "Vue.js, Vuex, vue-router, vant, element UI, npm, webpack, Git",
           "src": "https://shop.bitmain.com",
           "image": "imgs/bitmain.png"
         },
