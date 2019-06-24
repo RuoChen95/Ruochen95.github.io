@@ -4,17 +4,11 @@ title: About
 permalink: /about/
 ---
 
-希望通过“编程”来养活自己，通过重复造轮子来自我学习。
+Had been a front-end web developer for about two years in Bitmain, I am now having great passion of learning border aspects and want to become more influential. In the future, I want to build my own web application the same as notion or transfix, using the most advanced technology and make people work more effectively.
 
-喜欢听[IPN](ipn.li)。
-
-目标和[IT公论](ipn.li/itgonglun/)的听众一样：“对于技术以及艺术的敏锐感受力，以及精神和肉体上的强健”。
-
-### More Information
-
-在杭州长大，
-
-生活向的博客在简书。
+### Timeline (in 2019):
+- 2019.2 - 2019.5: TOFEL (85 -> 90 -> 95);
+- 2019.6 - 2019.9: PAT (preparing);
 
 ### Contact me
 
