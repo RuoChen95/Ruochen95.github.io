@@ -1,37 +1,48 @@
-(function() {
+window.onload = function() {
+	let carousal_with = document.getElementsByClassName("workContent")[0].clientWidth;
+	let carousel__items = document.getElementsByClassName("portfolio-item");
+	let carousel__items_length = carousel__items.length;
+	let carousel__items_translateX_array = [];
 
-	//filter function
-	function filterForItems(el) {
-		return el.nodeName == "DIV";
-	}
-	var workItem = document.getElementsByClassName('portfolio-item');
-
-	for (i = 1; i < workItem.length; i++) {
-		workItem[i].style = "display:none";
-	}
-	var workdivItem = Array.prototype.filter.call(workItem, filterForItems);
-
-	if (document.getElementById('backButton')) {
-		document.getElementById('backButton').addEventListener("click", function() {
-			var theLastOne = workdivItem[workdivItem.length - 1]
-
-			workdivItem[0].style = "display:none";
-			theLastOne.style = "display:show";
-
-			workdivItem.pop();
-			workdivItem.unshift(theLastOne);
-		});
-
-		document.getElementById('forwardButton').addEventListener("click", function() {
-			var theFirstOne = workdivItem[0];
-
-			workdivItem[0].style = "display:none";
-			workdivItem[1].style = "display:show";
-
-			workdivItem.shift();
-			workdivItem.push(theFirstOne);
-		});
+	for (let i = 0; i < carousel__items_length; i++) {
+		carousel__items[i].setAttribute("style", "transform: translateX(" + carousal_with * i+ "px)")
+		carousel__items_translateX_array.push(i);
 	}
 
+	carousel__items_translateX_array[carousel__items_length-1] = -1;
 
-})();
+
+	document.getElementById("forwardButton").addEventListener("click", function() {
+		let k = carousel__items_translateX_array.pop();
+		carousel__items_translateX_array.unshift(k);
+		for (let i = 0; i < carousel__items_length; i++) {
+
+			change_class(i, carousel__items_translateX_array, carousel__items, true);
+
+			carousel__items[i].setAttribute("style", "transform: translateX(" + carousal_with * carousel__items_translateX_array[i]+ "px)") // *
+		}
+	});
+
+	document.getElementById("backButton").addEventListener("click", function() {
+		let k = carousel__items_translateX_array.shift();
+		carousel__items_translateX_array.push(k);
+		for (let i = 0; i < carousel__items_length; i++) {
+			change_class(i, carousel__items_translateX_array, carousel__items, false); // *
+			carousel__items[i].setAttribute("style", "transform: translateX(" + carousal_with * carousel__items_translateX_array[i]+ "px)") // *
+
+		}
+	})
+
+	function change_class(i, array, DOM, Bool) {
+		let classVal = DOM[i].getAttribute("class");
+		if ((Bool == true && array[i] == -1 || array[i] == 0) || (Bool == false && array[i] == 1 || array[i] == 0)) {
+			if (classVal.includes("animating") == false) {
+				classVal = classVal.concat(" animating");
+				DOM[i].setAttribute("class", classVal);
+			}
+		} else {
+			classVal = classVal.replace(" animating", "");
+			DOM[i].setAttribute("class", classVal);
+		}
+	}
+}

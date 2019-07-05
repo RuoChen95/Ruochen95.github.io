@@ -302,16 +302,47 @@ footer {
   flex-direction: row;
   align-items: center;
   img {
+    z-index: 3;
     &:hover {
       cursor: pointer;
     }
   }
+
+
   .workContent {
-    display: flex;
+    position: relative;
     width: 700px;
     height: 600px;
-    align-items: center;
-    justify-content: space-around;
+
+    overflow: hidden;
+    margin: 0 auto;
+    div.portfolio-item {
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+      margin: 0 auto;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      position: absolute;
+
+      .portfolio-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 625px;
+        height: 463px;
+
+        z-index: 2;
+      }
+    }
+    div.animating {
+      transition: transform .4s ease-in-out;
+    }
   }
 }
 
